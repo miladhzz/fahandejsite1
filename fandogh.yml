@@ -1,0 +1,18 @@
+kind: ExternalService
+name: fahandejsite1
+spec:
+  image_pull_policy: Always
+  port: 80
+  source:
+    context: .
+    media_path: media
+    project_type: django
+    python_version: 3.7.3
+    static_path: static
+    wsgi: fahandejsite1.wsgi
+  volume_mounts:
+  - mount_path: /usr/src/app/media
+    sub_path: fahandejsite1/media
+  domains:
+    - name: fahandejffv.com
+    - name: www.fahandejffv.com
