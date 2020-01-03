@@ -32,7 +32,7 @@ class Article(BaseContent):
 
 
 class Slider(BaseContent):
-    url = models.CharField(max_length=255)
+    url = models.URLField(max_length=255)
     subtitle = models.CharField(max_length=255, blank=True, null=True)
     picture = models.ImageField(upload_to='images/slider', default='images/no-img-slider.jpg')
 
@@ -46,7 +46,7 @@ class Picture(models.Model):
     name = models.CharField(max_length=50, unique=True)
 
     def __str__(self):
-        return self.picture.name
+        return self.name
 
 
 class Gallery(BaseContent):
