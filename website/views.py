@@ -5,5 +5,7 @@ from . import models
 
 def index(request):
     sliders = models.Slider.objects.all()[:3]
-    print(sliders)
-    return render(request, "index.html", {'sliders': sliders})
+    gallery_footer = models.Gallery.objects.get(category__name='Gallery Footer').pictures
+    print(gallery_footer)
+    return render(request, "index.html", {'sliders': sliders,
+                                          'gallery_footer': gallery_footer})
