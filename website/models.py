@@ -21,7 +21,7 @@ class Category(models.Model):
 
 
 class Article(BaseContent):
-    slug = models.SlugField(max_length=255)
+    slug = models.SlugField(max_length=255, unique=True)
     content = models.TextField()
     main_picture = models.ImageField(upload_to='images/post', default='images/no-img-post.jpg', blank=True, null=True)
     category = models.ForeignKey(Category, null=True, on_delete=models.SET_NULL)
@@ -67,7 +67,7 @@ class ProductType(models.Model):
 
 
 class Product(BaseContent):
-    slug = models.SlugField(max_length=255)
+    slug = models.SlugField(max_length=255, unique=True)
     content = models.TextField()
     main_picture = models.ImageField(upload_to='images/product', default='images/no-img-product.jpg')
     pictures = models.ManyToManyField(Picture, blank=True)

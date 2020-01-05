@@ -16,7 +16,7 @@ def index(request):
     product_3_top = models.Product.objects.filter(category__name='3 Top Product')[:3]
 
     # Offer Box 2
-    article_offer_2 = models.Article.objects.filter(category__name='Offer Box 2')[:2]
+    article_offer_2 = models.Article.objects.filter(category__name='Offer Box 2', draft=False)[:2]
 
     print(article_offer_2)
     return render(request, "index.html", {'sliders': sliders,
