@@ -58,12 +58,21 @@ class Gallery(BaseContent):
         return self.title
 
 
+class ProductType(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+    create_date = models.DateTimeField(auto_now_add=True)    
+
+    def __str__(self):
+        return self.name
+
+
 class Product(BaseContent):
     slug = models.SlugField(max_length=255)
     content = models.TextField()
     main_picture = models.ImageField(upload_to='images/product', default='images/no-img-product.jpg')
     pictures = models.ManyToManyField(Picture)
     category = models.ForeignKey(Category, null=True, on_delete=models.SET_NULL)
+    product_type = models.ForeignKey(ProductType, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.title
