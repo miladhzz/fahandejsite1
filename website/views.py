@@ -11,6 +11,9 @@ def index(request):
         gallery_footer = models.Gallery.objects.get(category__name='Gallery Footer').pictures.all()
     except ObjectDoesNotExist:
         gallery_footer = None
-    print(gallery_footer)
+    
+    product_3_top_3 = models.Product.objects.filter(category__name='3 Top Product')[:3]
+    print(product_3_top_3)
     return render(request, "index.html", {'sliders': sliders,
-                                          'gallery_footer': gallery_footer})
+                                          'gallery_footer': gallery_footer,
+                                          'product_3_top_3': product_3_top_3})

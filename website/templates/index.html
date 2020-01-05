@@ -31,24 +31,14 @@
     <div class="categories-shop">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="{% static 'images/categories_img_01.jpg' %}" alt="" />
-                        <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
+                {%for product in product_3_top_3 %}
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="shop-cat-box">
+                            <img class="img-fluid" src="{{ product.main_picture.url }}" alt="" />
+                            <a class="btn hvr-hover" href="#">{{ product.title }}</a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="{% static 'images/categories_img_02.jpg' %}" alt="" />
-                        <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="{% static 'images/categories_img_03.jpg' %}" alt="" />
-                        <a class="btn hvr-hover" href="#">Lorem ipsum dolor</a>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
