@@ -34,7 +34,7 @@
                 {%for product in product_3_top %}
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="shop-cat-box">
-                            <img class="img-fluid" src="{{ product.main_picture.url }}" alt="" />
+                            <img class="img-fluid" src="{{ product.main_picture.url }}" alt="product.title" />
                             <a class="btn hvr-hover" href="#">{{ product.title }}</a>
                         </div>
                     </div>
@@ -47,16 +47,13 @@
 	<div class="box-add-products">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-12">
-					<div class="offer-box-products">
-						<img class="img-fluid" src="{% static 'images/add-img-01.jpg' %}" alt="" />
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-12">
-					<div class="offer-box-products">
-						<img class="img-fluid" src="{% static 'images/add-img-02.jpg' %}" alt="" />
-					</div>
-				</div>
+                {% for article in article_offer_2 %}
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="offer-box-products">
+                            <img class="img-fluid" src="{{ article.main_picture.url }}" alt="{{ article.title }}" />
+                        </div>
+                    </div>
+                {% endfor %}
 			</div>
 		</div>
 	</div>

@@ -15,10 +15,11 @@ def index(request):
     # product 3 top 
     product_3_top = models.Product.objects.filter(category__name='3 Top Product')[:3]
 
-    # Banner 2 top
+    # Offer Box 2
+    article_offer_2 = models.Article.objects.filter(category__name='Offer Box 2')[:2]
 
-
-    print(product_3_top)
+    print(article_offer_2)
     return render(request, "index.html", {'sliders': sliders,
                                           'gallery_footer': gallery_footer,
-                                          'product_3_top': product_3_top})
+                                          'product_3_top': product_3_top,
+                                          'article_offer_2': article_offer_2})
