@@ -70,7 +70,7 @@ class Product(BaseContent):
     slug = models.SlugField(max_length=255)
     content = models.TextField()
     main_picture = models.ImageField(upload_to='images/product', default='images/no-img-product.jpg')
-    pictures = models.ManyToManyField(Picture)
+    pictures = models.ManyToManyField(Picture, blank=True)
     category = models.ForeignKey(Category, null=True, on_delete=models.SET_NULL)
     product_type = models.ForeignKey(ProductType, null=True, on_delete=models.SET_NULL)
 
