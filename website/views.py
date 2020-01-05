@@ -18,7 +18,7 @@ def index(request):
     # Banner 2 top
 
 
-    print(product_3_top_3)
+    print(product_3_top)
     return render(request, "index.html", {'sliders': sliders,
                                           'gallery_footer': gallery_footer,
                                           'product_3_top': product_3_top})
