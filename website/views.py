@@ -18,8 +18,12 @@ def index(request):
     # Offer Box 2
     article_offer_2 = models.Article.objects.filter(category__name='Offer Box 2', draft=False)[:2]
 
-    print(article_offer_2)
+    # product middle
+    product_middle = models.Product.objects.order_by('?').filter(category__name='product middle')
+
+    print(product_middle)
     return render(request, "index.html", {'sliders': sliders,
                                           'gallery_footer': gallery_footer,
                                           'product_3_top': product_3_top,
-                                          'article_offer_2': article_offer_2})
+                                          'article_offer_2': article_offer_2,
+                                          'product_middle': product_middle})
