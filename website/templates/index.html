@@ -262,14 +262,13 @@
     </div>
     <!-- End Blog  -->
 
-
     <!-- Start Instagram Feed  -->
     <div class="instagram-box">
         <div class="main-instagram owl-carousel owl-theme">
             {% for picture in gallery_footer %}
                 <div class="item">
                 <div class="ins-inner-box">
-                    <img src="{{ picture.url }}" alt="" />
+                    <img src="{{ picture.picture.url }}" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
