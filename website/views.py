@@ -2,6 +2,7 @@
 from django.shortcuts import render
 from . import models
 from django.core.exceptions import ObjectDoesNotExist
+from django.utils.translation import activate
 
 
 def index(request):
@@ -24,7 +25,8 @@ def index(request):
     # Article 3 Bottom
     article_3_bottom = models.Article.objects.filter(category__name='3 Bottom Article')[:3]
 
-    print(article_3_bottom)
+    # print(article_3_bottom)
+    # activate('fa')
     return render(request, "index.html", {'sliders': sliders,
                                           'gallery_footer': gallery_footer,
                                           'product_3_top': product_3_top,

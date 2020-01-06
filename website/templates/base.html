@@ -70,8 +70,8 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="index.html">{% trans 'Home' %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">{% trans 'About Us' %}</a></li>
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
                             <ul class="dropdown-menu">
@@ -143,14 +143,21 @@
     <!-- End Top Search -->
 
     <div>
-        {% get_available_languages as languages %}
 
-        {% trans "View this category in:" %}
-        {% for lang_code, lang_name in languages %}
-            {% language lang_code %}
-            <a href="{% url 'index'  %}">{{ lang_name }}</a>
-            {% endlanguage %}
+<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+    <input name="next" type="hidden" value="{{ redirect_to }}">
+    <select name="language">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                {{ language.name_local }} ({{ language.code }})
+            </option>
         {% endfor %}
+    </select>
+    <input type="submit" value="Go">
+</form>
     </div>
     {% block content %}
 
