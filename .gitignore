@@ -1,4 +1,5 @@
-﻿fahandejsite1/settings.py
+fahandejsite1/settings.py
+secret.json
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
@@ -6,4 +7,3 @@
 .idea/workspace.xml
 .idea/workspace.xml___jb_old___
 /media
-secret.json
