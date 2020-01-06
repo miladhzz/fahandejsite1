@@ -112,12 +112,13 @@ class CommentGallery(BaseComment):
 
 
 class SiteSetting(models.Model):
-    address = models.CharField(max_length=255)
+    address = models.TextField(max_length=255)
     phone = models.CharField(max_length=20)
     mobile = models.CharField(max_length=20, null=True, blank=True)
     small_about = models.TextField(max_length=1000)
     full_about = models.TextField(blank=True, null=True)
     postal_code = models.CharField(max_length=20, null=True, blank=True)
+    email = models.CharField(max_length=100, null=True, blank=True)
 
     def __str__(self):
-        return self.id
+        return str(self.id)
