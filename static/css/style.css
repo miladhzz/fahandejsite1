@@ -913,6 +913,7 @@
  .filter-button-group button{
 }
  .products-single {
+     border: 1px solid;
      overflow: hidden;
      position: relative;
      margin-bottom: 30px;
