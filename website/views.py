@@ -21,9 +21,13 @@ def index(request):
     # product middle
     product_middle = models.Product.objects.order_by('?').filter(category__name='product middle')
 
-    print(product_middle)
+    # Article 3 Bottom
+    article_3_bottom = models.Article.objects.filter(category__name='3 Bottom Article')[:3]
+
+    print(article_3_bottom)
     return render(request, "index.html", {'sliders': sliders,
                                           'gallery_footer': gallery_footer,
                                           'product_3_top': product_3_top,
                                           'article_offer_2': article_offer_2,
-                                          'product_middle': product_middle})
+                                          'product_middle': product_middle,
+                                          'article_3_bottom': article_3_bottom})
