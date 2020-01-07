@@ -46,4 +46,6 @@ def product_detail(request, slug):
 
 def article_detail(request, slug):
     article = get_object_or_404(models.Article, slug=slug)
-    return render(request, "article_detail.html", {'article': article})
+    article_comments = models.CommentArticle.objects.filter(article=article, active=True)
+    return render(request, "article_detail.html", {'article': article,
+                                                   'article_comments': article_comments})

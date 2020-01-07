@@ -36,7 +36,6 @@ class Article(BaseContent):
         return reverse('article_detail', args=[self.slug])
 
 
-
 class Slider(BaseContent):
     url = models.URLField(max_length=255)
     subtitle = models.CharField(max_length=255, blank=True, null=True)
@@ -100,7 +99,7 @@ class BaseComment(models.Model):
 
 
 class CommentArticle(BaseComment):
-    post = models.ForeignKey(Article, on_delete=models.CASCADE)
+    article = models.ForeignKey(Article, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.comment
