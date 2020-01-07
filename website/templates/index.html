@@ -120,8 +120,8 @@
                         </div>
                         <div class="blog-content">
                             <div class="title-blog">
-                                <h3>{{ article.title }}</h3>
-                                <p>{{ article.content }}</p>
+                                <a href="{{ article.get_absolute_url }}"><h3>{{ article.title }}</h3></a>
+                                <p>{{ article.subtitle }}</p>
                             </div>
                             <ul class="option-blog">
                                 <li><a href="#"><i class="far fa-heart"></i></a></li>

@@ -38,3 +38,9 @@ def index(request):
 def product_detail(request, slug):
     product = get_object_or_404(models.Product, slug=slug)
     return render(request, "product_detail.html", {'product': product})
+
+
+
+def article_detail(request, slug):
+    article = get_object_or_404(models.Article, slug=slug)
+    return render(request, "article_detail.html", {'article': article})

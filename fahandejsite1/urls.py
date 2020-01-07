@@ -26,6 +26,7 @@ urlpatterns = i18n_patterns(
     path('fa/', views.index, name='index_fa'),
     path('c/', views.index, name='set_language'),
     path('product/<str:slug>/', views.product_detail, name='product_detail'),
+    path('article/<str:slug>/', views.article_detail, name='article_detail'),
     prefix_default_language=False
 )
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

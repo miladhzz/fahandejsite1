@@ -23,6 +23,7 @@ class Category(models.Model):
 
 class Article(BaseContent):
     slug = models.SlugField(max_length=255, unique=True)
+    subtitle = models.CharField(max_length=100, blank=True, null=True)
     content = models.TextField()
     main_picture = models.ImageField(upload_to='images/post', default='images/no-img-post.jpg', blank=True, null=True)
     category = models.ForeignKey(Category, null=True, on_delete=models.SET_NULL)
@@ -30,6 +31,10 @@ class Article(BaseContent):
 
     def __str__(self):
         return self.title
+    
+    def get_absolute_url(self):
+        return reverse('article_detail', args=[self.slug])
+
 
 
 class Slider(BaseContent):
