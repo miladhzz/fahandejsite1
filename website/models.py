@@ -130,3 +130,12 @@ class SiteSetting(models.Model):
 
     def __str__(self):
         return str(self.id)
+
+
+class Contact(BaseComment):
+    comment = None
+    active = None
+    message = models.TextField()
+
+    def __str__(self):
+        return self.message
