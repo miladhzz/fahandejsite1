@@ -37,8 +37,11 @@ def index(request):
 
 def product_detail(request, slug):
     product = get_object_or_404(models.Product, slug=slug)
-    return render(request, "product_detail.html", {'product': product})
-
+    product_pictures = product.pictures.all()
+    product_comments = models.CommentProduct.objects.filter(product=product, active=True)
+    return render(request, "product_detail.html", {'product': product,
+                                                   'product_pictures': product_pictures,
+                                                   'product_comments': product_comments})
 
 
 def article_detail(request, slug):
