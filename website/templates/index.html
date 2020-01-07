@@ -90,7 +90,7 @@
                                 <img src="{{ product.main_picture.url }}" class="img-fluid" alt="{{ product.title }}">
                             </div>
                             <div class="why-text">
-                                <h4>{{ product.title }}</h4>
+                                <a href="{{ product.get_absolute_url }}"><h4>{{ product.title }}</h4></a>
                             </div>
                         </div>
                     </div>
@@ -144,9 +144,6 @@
                 <div class="item">
                 <div class="ins-inner-box">
                     <img src="{{ picture.picture.url }}" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
                 </div>
             </div>
             {% endfor %}
