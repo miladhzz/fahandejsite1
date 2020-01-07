@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load i18n %}
+{% block title %} Fahandej FFV {% endblock %}
 {% block content %}
     <!-- Start Slider -->
     <div id="slides-shop" class="cover-slides">
@@ -35,7 +36,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="shop-cat-box">
                             <img class="img-fluid" src="{{ product.main_picture.url }}" alt="product.title" />
-                            <a class="btn hvr-hover" href="#">{{ product.title }}</a>
+                            <a class="btn hvr-hover" href="{{ product.get_absolute_url }}">{{ product.title }}</a>
                         </div>
                     </div>
                 {% endfor %}

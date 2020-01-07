@@ -1,5 +1,5 @@
 # from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from . import models
 from django.core.exceptions import ObjectDoesNotExist
 from django.utils.translation import activate
@@ -33,3 +33,8 @@ def index(request):
                                           'article_offer_2': article_offer_2,
                                           'product_middle': product_middle,
                                           'article_3_bottom': article_3_bottom})
+
+
+def product_detail(request, slug):
+    product = get_object_or_404(models.Product, slug=slug)
+    return render(request, "product_detail.html", {'product': product})
