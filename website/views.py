@@ -49,3 +49,7 @@ def article_detail(request, slug):
     article_comments = models.CommentArticle.objects.filter(article=article, active=True)
     return render(request, "article_detail.html", {'article': article,
                                                    'article_comments': article_comments})
+
+
+def about_us(request):
+    return render(request, "about.html")

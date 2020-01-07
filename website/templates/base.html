@@ -54,7 +54,7 @@
                                     </option>
                                 {% endfor %}
                             </select>
-                            <input type="submit" value="Go">
+                            <input type="submit" hidden value="Go">
                         </form>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">{% trans 'Home' %}</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">{% trans 'About Us' %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'about_us' %}">{% trans 'About Us' %}</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
                     </ul>
                 </div>
