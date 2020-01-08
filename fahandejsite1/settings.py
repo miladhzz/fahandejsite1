@@ -22,13 +22,18 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
-with open(os.path.join(BASE_DIR, 'secret.json')) as secret_file:
-    secret = json.load(secret_file)
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+secret = json.load(open(os.path.join(BASE_DIR, 'secret.json')))
+secret_dev = json.load(open(os.path.join(BASE_DIR, 'secret_dev.json')))
 
 
-def get_secret(setting, secrets=secret):
+def get_secret(setting, secrets=secret, secrets_dev=secret_dev):
     """Get secret setting or fail with ImproperlyConfigured"""
     try:
+        if DEBUG:
+            return secrets_dev[setting]
         return secrets[setting]
     except KeyError:
         raise ImproperlyConfigured("Set the {} setting".format(setting))
@@ -37,8 +42,7 @@ def get_secret(setting, secrets=secret):
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = get_secret('SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'www.fahandejffv.com', 'fahandejffv.com']
 
@@ -94,7 +98,7 @@ DATABASES = {
         'NAME': get_secret('DB_NAME'),
         'USER': get_secret('DB_USERNAME'),
         'PASSWORD': get_secret('DB_PASSWORD'),
-        'HOST': 'localhost',
+        'HOST': get_secret('HOST'),
         'PORT': '',
     }
 }
@@ -140,9 +144,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    # os.path.join(BASE_DIR, "static"),
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
