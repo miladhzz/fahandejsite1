@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-09 08:15+0000\n"
+"POT-Creation-Date: 2020-01-09 19:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,27 +18,142 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\website\templates\about.html:4
-msgid "About US"
-msgstr "درباره ما"
-
-#: .\website\templates\article_detail.html:4
-msgid "Article Detail"
+#: .\fahandejsite1\settings.py:131
+msgid "Farsi"
 msgstr ""
 
-#: .\website\templates\base.html:83
-msgid "Home"
-msgstr "خانه"
+#: .\fahandejsite1\settings.py:132
+msgid "English"
+msgstr ""
 
-#: .\website\templates\base.html:84
+#: .\fahandejsite1\settings.py:133
+msgid "Russian"
+msgstr ""
+
+#: .\website\templates\about.html:4 .\website\templates\about.html:11
+#: .\website\templates\base.html:81 .\website\templates\base.html:132
 msgid "About Us"
 msgstr "درباره ما"
 
+#: .\website\templates\article_detail.html:4
+#: .\website\templates\article_detail.html:12
+msgid "Article Detail"
+msgstr "محتوای مقاله"
+
+#: .\website\templates\article_detail.html:34
+#: .\website\templates\product_detail.html:64
+msgid "Comments"
+msgstr "نظرات"
+
+#: .\website\templates\article_detail.html:44
+#: .\website\templates\product_detail.html:74
+msgid "Posted by"
+msgstr "ارسال شده توسط"
+
+#: .\website\templates\article_detail.html:44
+#: .\website\templates\product_detail.html:74
+msgid "on"
+msgstr "در"
+
+#: .\website\templates\article_detail.html:49
+#: .\website\templates\product_detail.html:79
+msgid "Leave a Comment"
+msgstr "نظر دهید"
+
+#: .\website\templates\base.html:80
+msgid "Home"
+msgstr "خانه"
+
+#: .\website\templates\base.html:82 .\website\templates\base.html:138
 #: .\website\templates\contact_us.html:4
 msgid "Contact Us"
+msgstr "تماس با ما"
+
+#: .\website\templates\base.html:105
+msgid "Search"
+msgstr "جستجو"
+
+#: .\website\templates\base.html:124
+msgid "About Fahandej"
+msgstr "درباره Fahandej"
+
+#: .\website\templates\base.html:130
+msgid "Links"
+msgstr "لینک ها"
+
+#: .\website\templates\base.html:141 .\website\templates\contact_us.html:68
+msgid "Address:"
+msgstr "آدرس"
+
+#: .\website\templates\base.html:144 .\website\templates\contact_us.html:71
+msgid "Phone:"
+msgstr "تلفن"
+
+#: .\website\templates\base.html:147 .\website\templates\contact_us.html:74
+msgid "Email:"
+msgstr "ایمیل"
+
+#: .\website\templates\contact_us.html:25
+msgid "GET IN TOUCH"
+msgstr "با ما در تماس باشید"
+
+#: .\website\templates\contact_us.html:26
+msgid ""
+"Our team is happy to answer your questions. Fill out the form and we’ll be "
+"in touch as soon as possible."
 msgstr ""
+"تیم ما خوشحال می شود که به سوالات شما پاسخ دهد. فرم را پر کنید، در اسرع وقت "
+"با شما در تماس خواهیم بود"
+
+#: .\website\templates\contact_us.html:31
+msgid "Your Name"
+msgstr "نام شما"
+
+#: .\website\templates\contact_us.html:37
+msgid "Your Email"
+msgstr "ایمیل شما"
+
+#: .\website\templates\contact_us.html:43
+msgid "Subject"
+msgstr "موضوع"
+
+#: .\website\templates\contact_us.html:49
+msgid "Your Message"
+msgstr "متن پیام"
+
+#: .\website\templates\contact_us.html:53
+msgid "Send Message"
+msgstr "ارسال پیام"
+
+#: .\website\templates\contact_us.html:64
+msgid "CONTACT INFO"
+msgstr "اطلاعات تماس"
+
+#: .\website\templates\index.html:68
+msgid "Fruits & Vegetables"
+msgstr "میوه و سبزیجات"
+
+#: .\website\templates\index.html:76
+msgid "All"
+msgstr "همه"
+
+#: .\website\templates\index.html:77
+msgid "Vegetable"
+msgstr "سبزی"
+
+#: .\website\templates\index.html:78
+msgid "Fruit"
+msgstr "میوه"
+
+#: .\website\templates\index.html:108
+msgid "latest blog"
+msgstr "آخرین مقالات"
 
 #: .\website\templates\product_detail.html:4
 #: .\website\templates\product_detail.html:12
 msgid "Product Detail"
-msgstr ""
+msgstr "جزئیات محصول"
+
+#: .\website\templates\product_detail.html:55
+msgid "Description:"
+msgstr "جزئیات:"

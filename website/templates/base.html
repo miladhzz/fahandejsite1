@@ -28,10 +28,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
 
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
@@ -83,7 +79,7 @@
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">{% trans 'Home' %}</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'about_us' %}">{% trans 'About Us' %}</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'contact_us' %}">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'contact_us' %}">{% trans 'Contact Us' %}</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -106,7 +102,7 @@
         <div class="container">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Search">
+                <input type="text" class="form-control" placeholder="{% trans 'Search' %}">
                 <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
             </div>
         </div>
@@ -125,35 +121,30 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-widget">
-                            <h4>About Freshshop</h4>
+                            <h4>{% trans 'About Fahandej' %}</h4>
                             {{ settings.small_about|safe }}
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-link">
-                            <h4>Information</h4>
+                            <h4>{% trans 'Links' %}</h4>
                             <ul>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Customer Service</a></li>
-                                <li><a href="#">Our Sitemap</a></li>
-                                <li><a href="#">Terms &amp; Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Delivery Information</a></li>
+                                <li><a href="{% url 'about_us' %}">{% trans 'About Us' %}</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-link-contact">
-                            <h4>Contact Us</h4>
+                            <h4>{% trans 'Contact Us' %}</h4>
                             <ul>
                                 <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address: {{ settings.address|safe }} </p>
+                                    <p><i class="fas fa-map-marker-alt"></i>{% trans 'Address:' %} {{ settings.address|safe }} </p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: {{ settings.phone }}</p>
+                                    <p><i class="fas fa-phone-square"></i>{% trans 'Phone:' %} {{ settings.phone }}</p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-envelope"></i>Email: {{ settings.email }}</p>
+                                    <p><i class="fas fa-envelope"></i>{% trans 'Email:' %} {{ settings.email }}</p>
                                 </li>
                             </ul>
                         </div>

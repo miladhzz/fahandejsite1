@@ -22,11 +22,11 @@ from django.conf import settings
 
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
-    path('loginmodir/', admin.site.urls),
 ]
 
 urlpatterns += i18n_patterns(
     path('', include('website.urls')),
+    path('loginmodir/', admin.site.urls),
     prefix_default_language=True
 )
 

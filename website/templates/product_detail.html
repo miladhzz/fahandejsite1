@@ -52,7 +52,7 @@
                 <div class="col-xl-7 col-lg-7 col-md-6">
                     <div class="single-product-details">
                         <h2>{{ product.title }}</h2>
-						<h4>Description:</h4>
+						<h4>{% trans 'Description:' %}</h4>
 						<p>{{ product.content|safe }}</p>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
 			<div class="row my-5">
 				<div class="card card-outline-secondary my-4">
 					<div class="card-header">
-						<h2>Product Reviews</h2>
+						<h2>{% trans 'Comments' %}</h2>
 					</div>
 					<div class="card-body">
                         {% for comment in product_comments %}
@@ -71,12 +71,12 @@
 							</div>
 							<div class="media-body">
                                 <p> {{ comment.comment }}</p>
-								<small class="text-muted">Posted by {{ comment.name }} on {{ comment.create_date }}</small>
+								<small class="text-muted">{% trans 'Posted by' %} {{ comment.name }} {% trans 'on' %} {{ comment.create_date }}</small>
 							</div>
 						    </div>
 						    <hr>
 						{% endfor %}
-						<a href="#" class="btn hvr-hover">Leave a Review</a>
+						<a href="#" class="btn hvr-hover">{% trans 'Leave a Comment' %}</a>
 					</div>
 				  </div>
 			</div>
