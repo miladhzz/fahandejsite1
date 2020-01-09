@@ -16,18 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.i18n import i18n_patterns
-from website import views
 from django.conf.urls.static import static
 from django.conf import settings
 
 
 urlpatterns = [
+    path('i18n/', include('django.conf.urls.i18n')),
     path('loginmodir/', admin.site.urls),
 ]
 
 urlpatterns += i18n_patterns(
     path('', include('website.urls')),
-    prefix_default_language=False
+    prefix_default_language=True
 )
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

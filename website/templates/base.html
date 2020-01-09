@@ -42,9 +42,10 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="custom-select-box">
-                        <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                        <form action="{% url 'set_language' %}" method="post">
+                            {% csrf_token %}
                             <input name="next" type="hidden" value="{{ redirect_to }}">
-                            <select name="language">
+                            <select name="language" id="selected_language">
                                 {% get_current_language as LANGUAGE_CODE %}
                                 {% get_available_languages as LANGUAGES %}
                                 {% get_language_info_list for LANGUAGES as languages %}
@@ -54,7 +55,7 @@
                                     </option>
                                 {% endfor %}
                             </select>
-                            <input type="submit" hidden value="Go">
+                            <input type="submit" id="change_language" hidden value="Go">
                         </form>
                     </div>
                 </div>
@@ -181,6 +182,13 @@
     <script src="{% static 'js/form-validator.min.js' %}"></script>
     <script src="{% static 'js/contact-form-script.js' %}"></script>
     <script src="{% static 'js/custom.js' %}"></script>
+    <script type="application/javascript">
+        $('document').ready(function () {
+            $('#selected_language').on('change', function () {
+            $('#change_language').click();
+        });
+        });
+    </script>
 </body>
 
 </html>
