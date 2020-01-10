@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-10 19:15+0000\n"
+"POT-Creation-Date: 2020-01-10 20:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,63 +18,75 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: .\adminsite\forms.py:12 .\website\templates\base.html:146
+#: .\website\templates\contact_us.html:68
+msgid "Address:"
+msgstr "آدرس:"
+
+#: .\adminsite\forms.py:13 .\website\templates\base.html:149
+#: .\website\templates\contact_us.html:71
+msgid "Phone:"
+msgstr "تلفن:"
+
+#: .\adminsite\forms.py:14
+msgid "Mobile:"
+msgstr "موبایل:"
+
+#: .\adminsite\forms.py:15
+msgid "Small About:"
+msgstr "توضیحات مختصر:"
+
+#: .\adminsite\forms.py:16
+msgid "Complete About:"
+msgstr "توضیحات کامل:"
+
+#: .\adminsite\forms.py:17
+msgid "Postal Code:"
+msgstr "کد پستی:"
+
+#: .\adminsite\forms.py:18 .\website\templates\base.html:152
+#: .\website\templates\contact_us.html:74
+msgid "Email:"
+msgstr "ایمیل:"
+
+#: .\adminsite\forms.py:25
+msgid "Too many characters."
+msgstr "تعداد کاراکترها بیشتر از حد مجاز است."
+
+#: .\adminsite\forms.py:26
+msgid "This field is required."
+msgstr "پر کردن این فیلد اجباری است."
+
 #: .\adminsite\templates\base-admin.html:66
 msgid "Menus"
 msgstr "منوها"
+
+#: .\adminsite\templates\base-admin.html:67
+msgid "Logout"
+msgstr "خروج"
 
 #: .\adminsite\templates\change-settings.html:8
 msgid "Change site settings"
 msgstr "تغییر تنظیمات سایت"
 
-#: .\adminsite\templates\change-settings.html:12
+#: .\adminsite\templates\change-settings.html:14
 msgid "Save Changes"
 msgstr "دخیره تغییرات"
 
-#: .\fahandejsite1\settings.py:133
+#: .\fahandejsite1\settings.py:136
 msgid "Farsi"
 msgstr ""
 
-#: .\fahandejsite1\settings.py:134
+#: .\fahandejsite1\settings.py:137
 msgid "English"
 msgstr ""
 
-#: .\fahandejsite1\settings.py:135
+#: .\fahandejsite1\settings.py:138
 msgid "Russian"
 msgstr ""
 
-#: .\website\models.py:124 .\website\templates\base.html:141
-#: .\website\templates\contact_us.html:68
-msgid "Address:"
-msgstr "آدرس:"
-
-#: .\website\models.py:125 .\website\templates\base.html:144
-#: .\website\templates\contact_us.html:71
-msgid "Phone:"
-msgstr "تلفن:"
-
-#: .\website\models.py:126
-msgid "Mobile:"
-msgstr "موبایل:"
-
-#: .\website\models.py:127
-msgid "Small About:"
-msgstr "توضیحات مختصر:"
-
-#: .\website\models.py:128
-msgid "Complete About:"
-msgstr "توضیحات کامل:"
-
-#: .\website\models.py:129
-msgid "Postal Code:"
-msgstr "کد پستی:"
-
-#: .\website\models.py:130 .\website\templates\base.html:147
-#: .\website\templates\contact_us.html:74
-msgid "Email:"
-msgstr "ایمیل:"
-
 #: .\website\templates\about.html:4 .\website\templates\about.html:11
-#: .\website\templates\base.html:81 .\website\templates\base.html:132
+#: .\website\templates\base.html:86 .\website\templates\base.html:137
 msgid "About Us"
 msgstr "درباره ما"
 
@@ -103,24 +115,24 @@ msgstr "در"
 msgid "Leave a Comment"
 msgstr "نظر دهید"
 
-#: .\website\templates\base.html:80
+#: .\website\templates\base.html:85
 msgid "Home"
 msgstr "خانه"
 
-#: .\website\templates\base.html:82 .\website\templates\base.html:138
+#: .\website\templates\base.html:87 .\website\templates\base.html:143
 #: .\website\templates\contact_us.html:4
 msgid "Contact Us"
 msgstr "تماس با ما"
 
-#: .\website\templates\base.html:105
+#: .\website\templates\base.html:110
 msgid "Search"
 msgstr "جستجو"
 
-#: .\website\templates\base.html:124
+#: .\website\templates\base.html:129
 msgid "About Fahandej"
 msgstr "درباره Fahandej"
 
-#: .\website\templates\base.html:130
+#: .\website\templates\base.html:135
 msgid "Links"
 msgstr "لینک ها"
 

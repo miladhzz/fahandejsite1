@@ -22,7 +22,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %} ">
     <!-- Site CSS -->
+    {% get_current_language as LANGUAGE_CODE %}
+{% if LANGUAGE_CODE == 'fa'%}
     <link rel="stylesheet" href="{% static 'css/style-fa.css' %}">
+{% else %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endif %}
+
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="{% static  'css/responsive.css' %}">
     <!-- Custom CSS -->
@@ -42,7 +48,6 @@
                             {% csrf_token %}
                             <input name="next" type="hidden" value="{{ redirect_to }}">
                             <select name="language" id="selected_language">
-                                {% get_current_language as LANGUAGE_CODE %}
                                 {% get_available_languages as LANGUAGES %}
                                 {% get_language_info_list for LANGUAGES as languages %}
                                 {% for language in languages %}

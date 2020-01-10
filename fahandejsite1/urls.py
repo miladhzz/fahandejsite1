@@ -18,16 +18,18 @@ from django.urls import path, include
 from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.conf import settings
+from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
+    path('loginmodir/', admin.site.urls),
+    path('login/', auth_views.LoginView.as_view(), name="login"),
 ]
 
 urlpatterns += i18n_patterns(
     path('', include('website.urls')),
     path('admin/', include('adminsite.urls')),
-    path('loginmodir/', admin.site.urls),
     prefix_default_language=True
 )
 

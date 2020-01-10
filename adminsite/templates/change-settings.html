@@ -6,6 +6,8 @@
 {% block content %}
     <div class="container" dir="rtl">
         <h1>{% trans 'Change site settings' %}</h1>
+        {{ form.non_field_errors }}
+
         <form action="." method="post" novalidate>
             {% csrf_token %}
             {{ form.as_ul}}
