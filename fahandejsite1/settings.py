@@ -49,6 +49,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'www.fahandejffv.com', 'fahandejffv.c
 
 INSTALLED_APPS = [
     'website.apps.WebsiteConfig',
+    'adminsite.apps.AdminsiteConfig',
     'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',

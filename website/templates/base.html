@@ -70,16 +70,16 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                    <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" class="logo" alt=""></a>
+                    <a class="navbar-brand" href="{% url 'website:index' %}"><img src="{% static 'images/logo.png' %}" class="logo" alt=""></a>
                 </div>
                 <!-- End Header Navigation -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">{% trans 'Home' %}</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'about_us' %}">{% trans 'About Us' %}</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'contact_us' %}">{% trans 'Contact Us' %}</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="{% url 'website:index' %}">{% trans 'Home' %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'website:about_us' %}">{% trans 'About Us' %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'website:contact_us' %}">{% trans 'Contact Us' %}</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -129,7 +129,7 @@
                         <div class="footer-link">
                             <h4>{% trans 'Links' %}</h4>
                             <ul>
-                                <li><a href="{% url 'about_us' %}">{% trans 'About Us' %}</a></li>
+                                <li><a href="{% url 'website:about_us' %}">{% trans 'About Us' %}</a></li>
                             </ul>
                         </div>
                     </div>

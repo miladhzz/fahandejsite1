@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-09 19:39+0000\n"
+"POT-Creation-Date: 2020-01-10 19:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\fahandejsite1\settings.py:131
+#: .\adminsite\templates\base-admin.html:66
+msgid "Menus"
+msgstr "منوها"
+
+#: .\adminsite\templates\change-settings.html:8
+msgid "Change site settings"
+msgstr "تغییر تنظیمات سایت"
+
+#: .\adminsite\templates\change-settings.html:12
+msgid "Save Changes"
+msgstr "دخیره تغییرات"
+
+#: .\fahandejsite1\settings.py:133
 msgid "Farsi"
 msgstr ""
 
-#: .\fahandejsite1\settings.py:132
+#: .\fahandejsite1\settings.py:134
 msgid "English"
 msgstr ""
 
-#: .\fahandejsite1\settings.py:133
+#: .\fahandejsite1\settings.py:135
 msgid "Russian"
 msgstr ""
+
+#: .\website\models.py:124 .\website\templates\base.html:141
+#: .\website\templates\contact_us.html:68
+msgid "Address:"
+msgstr "آدرس:"
+
+#: .\website\models.py:125 .\website\templates\base.html:144
+#: .\website\templates\contact_us.html:71
+msgid "Phone:"
+msgstr "تلفن:"
+
+#: .\website\models.py:126
+msgid "Mobile:"
+msgstr "موبایل:"
+
+#: .\website\models.py:127
+msgid "Small About:"
+msgstr "توضیحات مختصر:"
+
+#: .\website\models.py:128
+msgid "Complete About:"
+msgstr "توضیحات کامل:"
+
+#: .\website\models.py:129
+msgid "Postal Code:"
+msgstr "کد پستی:"
+
+#: .\website\models.py:130 .\website\templates\base.html:147
+#: .\website\templates\contact_us.html:74
+msgid "Email:"
+msgstr "ایمیل:"
 
 #: .\website\templates\about.html:4 .\website\templates\about.html:11
 #: .\website\templates\base.html:81 .\website\templates\base.html:132
@@ -80,18 +123,6 @@ msgstr "درباره Fahandej"
 #: .\website\templates\base.html:130
 msgid "Links"
 msgstr "لینک ها"
-
-#: .\website\templates\base.html:141 .\website\templates\contact_us.html:68
-msgid "Address:"
-msgstr "آدرس"
-
-#: .\website\templates\base.html:144 .\website\templates\contact_us.html:71
-msgid "Phone:"
-msgstr "تلفن"
-
-#: .\website\templates\base.html:147 .\website\templates\contact_us.html:74
-msgid "Email:"
-msgstr "ایمیل"
 
 #: .\website\templates\contact_us.html:25
 msgid "GET IN TOUCH"

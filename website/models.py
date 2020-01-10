@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+from django.utils.translation import ugettext_lazy as _
 
 
 class BaseContent(models.Model):
@@ -33,7 +34,7 @@ class Article(BaseContent):
         return self.title
     
     def get_absolute_url(self):
-        return reverse('article_detail', args=[self.slug])
+        return reverse('website:article_detail', args=[self.slug])
 
 
 class Slider(BaseContent):
@@ -83,7 +84,7 @@ class Product(BaseContent):
         return self.title
     
     def get_absolute_url(self):
-        return reverse('product_detail', args=[self.slug])
+        return reverse('website:product_detail', args=[self.slug])
 
 
 class BaseComment(models.Model):
@@ -120,13 +121,13 @@ class CommentGallery(BaseComment):
 
 
 class SiteSetting(models.Model):
-    address = models.TextField(max_length=255, blank=True, null=True)
-    phone = models.CharField(max_length=20)
-    mobile = models.CharField(max_length=20, null=True, blank=True)
-    small_about = models.CharField(max_length=150, blank=True, null=True)
-    full_about = models.TextField(blank=True, null=True)
-    postal_code = models.CharField(max_length=20, null=True, blank=True)
-    email = models.CharField(max_length=100, null=True, blank=True)
+    address = models.TextField(max_length=255, blank=True, null=True, verbose_name=_('Address:'))
+    phone = models.CharField(max_length=20, verbose_name=_('Phone:'))
+    mobile = models.CharField(max_length=20, null=True, blank=True, verbose_name=_('Mobile:'))
+    small_about = models.CharField(max_length=150, blank=True, null=True, verbose_name=_('Small About:'))
+    full_about = models.TextField(blank=True, null=True, verbose_name=_('Complete About:'))
+    postal_code = models.CharField(max_length=20, null=True, blank=True, verbose_name=_('Postal Code:'))
+    email = models.CharField(max_length=100, null=True, blank=True, verbose_name=_('Email:'))
 
     def __str__(self):
         return str(self.id)

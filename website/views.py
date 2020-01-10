@@ -1,12 +1,7 @@
 # from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
-from django.views.decorators.http import require_POST
-
 from . import models
 from django.core.exceptions import ObjectDoesNotExist
-from django.utils.translation import activate
-from django.shortcuts import redirect
-from django.urls import reverse
 
 
 def index(request):

@@ -26,6 +26,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path('', include('website.urls')),
+    path('admin/', include('adminsite.urls')),
     path('loginmodir/', admin.site.urls),
     prefix_default_language=True
 )

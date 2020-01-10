@@ -1,5 +1,5 @@
 from modeltranslation.translator import register, TranslationOptions
-from . import models
+from website import models
 
 
 @register(models.SiteSetting)
