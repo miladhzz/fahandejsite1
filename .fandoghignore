@@ -1,8 +1,9 @@
 local_settings.py
 *.pyc
 *.log
-*.mo
 *.pot
 db.sqlite3
 .env
 __pycache__/
+.git
+.idea
