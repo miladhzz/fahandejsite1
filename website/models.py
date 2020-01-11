@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+from ckeditor.fields import RichTextField
 
 
 class BaseContent(models.Model):
@@ -24,7 +25,7 @@ class Category(models.Model):
 class Article(BaseContent):
     slug = models.SlugField(max_length=255, unique=True)
     subtitle = models.CharField(max_length=100, blank=True, null=True)
-    content = models.TextField()
+    content = RichTextField()
     main_picture = models.ImageField(upload_to='images/post', default='images/no-img-post.jpg', blank=True, null=True)
     category = models.ForeignKey(Category, null=True, on_delete=models.SET_NULL)
     draft = models.BooleanField(default=True)
@@ -73,7 +74,7 @@ class ProductType(models.Model):
 
 class Product(BaseContent):
     slug = models.SlugField(max_length=255, unique=True)
-    content = models.TextField()
+    content = RichTextField()
     main_picture = models.ImageField(upload_to='images/product', default='images/no-img-product.jpg')
     pictures = models.ManyToManyField(Picture, blank=True)
     category = models.ForeignKey(Category, null=True, on_delete=models.SET_NULL)
@@ -92,7 +93,7 @@ class BaseComment(models.Model):
     mobile = models.CharField(max_length=11, null=True, blank=True)
     create_date = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=False)
-    comment = models.TextField()
+    comment = RichTextField()
 
     class Meta:
         abstract = True
@@ -120,11 +121,11 @@ class CommentGallery(BaseComment):
 
 
 class SiteSetting(models.Model):
-    address = models.TextField(max_length=255, blank=True, null=True)
+    address = models.CharField(max_length=255, blank=True, null=True)
     phone = models.CharField(max_length=20)
     mobile = models.CharField(max_length=20, null=True, blank=True)
     small_about = models.CharField(max_length=150, blank=True, null=True)
-    full_about = models.TextField(blank=True, null=True)
+    full_about = RichTextField(blank=True, null=True)
     postal_code = models.CharField(max_length=20, null=True, blank=True)
     email = models.CharField(max_length=100, null=True, blank=True)
 
