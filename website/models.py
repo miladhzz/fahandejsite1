@@ -23,7 +23,7 @@ class Category(models.Model):
 
 
 class Article(BaseContent):
-    slug = models.SlugField(max_length=255, unique=True)
+    slug = models.SlugField(max_length=255, unique=True, allow_unicode=True)
     subtitle = models.CharField(max_length=100, blank=True, null=True)
     content = RichTextField()
     main_picture = models.ImageField(upload_to='images/post', default='images/no-img-post.jpg', blank=True, null=True)
@@ -73,7 +73,7 @@ class ProductType(models.Model):
 
 
 class Product(BaseContent):
-    slug = models.SlugField(max_length=255, unique=True)
+    slug = models.SlugField(max_length=255, unique=True, allow_unicode=True)
     content = RichTextField()
     main_picture = models.ImageField(upload_to='images/product', default='images/no-img-product.jpg')
     pictures = models.ManyToManyField(Picture, blank=True)

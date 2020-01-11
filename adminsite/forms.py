@@ -26,3 +26,26 @@ class SiteSettingsForm(TranslationModelForm):
                 'required': _("This field is required."),
             },
         }
+
+
+class ArticleForm(TranslationModelForm):
+    class Meta:
+        model = models.Article
+        fields = ('title', 'slug', 'subtitle', 'content', 'main_picture', 'category', 'draft')
+        labels = {
+            'title': _('Title:'),
+            'slug': _('Slug'),
+            'subtitle': _('Subtitle:'),
+            'content': _('Content:'),
+            'main_picture': _('Main Picture:'),
+            'category': _('Category:'),
+            'draft': _('Draft:'),
+        }
+    #
+    # def save(self, request):
+    #     instance = super(ArticleForm, self).save(commit=False)
+    #     instance.user = request.user
+    #
+    # def __init__(self, *args, **kwargs):
+    #     self.user = kwargs.pop('user', None)
+    #     super(ArticleForm, self).__init__(*args, **kwargs)

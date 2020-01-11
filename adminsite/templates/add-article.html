@@ -1,13 +1,13 @@
 {% extends "base-admin.html" %}
 {% load static %}
 {% load i18n %}
-{% block title%} {% trans 'Change Site Settings' %} {% endblock %}
+{% block title%} {% trans 'Add Article' %} {% endblock %}
 
 {% block content %}
     <div class="container" dir="rtl">
-        <h1>{% trans 'Change Site Settings' %}</h1>
+        <h1>{% trans 'Add Article' %}</h1>
 
-        <form action="." method="post" novalidate>
+        <form action="." method="post" novalidate enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.media}}
             {{ form.as_ul}}
