@@ -13,13 +13,13 @@ def index(request):
         gallery_footer = None
     
     # product 3 top 
-    product_3_top = models.Product.objects.filter(category__name='3 Top Product')[:3]
+    product_3_top = models.Product.objects.filter(category__name='3 Top Product', draft=False)[:3]
 
     # Offer Box 2
     article_offer_2 = models.Article.objects.filter(category__name='Offer Box 2', draft=False)[:2]
 
     # product middle
-    product_middle = models.Product.objects.order_by('?').filter(category__name='product middle')
+    product_middle = models.Product.objects.order_by('?').filter(category__name='product middle', draft=False)
 
     # Article 3 Bottom
     article_3_bottom = models.Article.objects.filter(category__name='3 Bottom Article')[:3]

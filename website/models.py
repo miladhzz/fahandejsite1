@@ -77,6 +77,7 @@ class Product(BaseContent):
     content = RichTextField()
     main_picture = models.ImageField(upload_to='images/product', default='images/no-img-product.jpg')
     pictures = models.ManyToManyField(Picture, blank=True)
+    draft = models.BooleanField(default=True)
     category = models.ForeignKey(Category, null=True, on_delete=models.SET_NULL)
     product_type = models.ForeignKey(ProductType, null=True, on_delete=models.SET_NULL)
 

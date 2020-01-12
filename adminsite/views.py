@@ -36,3 +36,17 @@ def add_article(request):
     else:
         form = forms.ArticleForm()
     return render(request, 'add-article.html', {'form': form})
+
+
+@login_required
+def add_product(request):
+    if request.method == 'POST':
+        form = forms.ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save(commit=False)
+            product.author = request.user
+            product.save()
+            # todo send to edit product
+    else:
+        form = forms.ProductForm()
+    return render(request, 'add-product.html', {'form': form})

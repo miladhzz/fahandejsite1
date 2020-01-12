@@ -13,3 +13,10 @@ class ArticleTranslationOptions(TranslationOptions):
     fields = ('title', 'slug', 'subtitle', 'content')
     required_languages = {'fa': ('title', 'slug', 'content')}
 
+
+@register(models.Product)
+class ProductTranslationOptions(TranslationOptions):
+    fields = ('title', 'slug', 'content')
+    required_languages = {'fa': ('title', 'slug', 'content')}
+
+

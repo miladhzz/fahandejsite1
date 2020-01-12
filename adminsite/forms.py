@@ -49,3 +49,18 @@ class ArticleForm(TranslationModelForm):
     # def __init__(self, *args, **kwargs):
     #     self.user = kwargs.pop('user', None)
     #     super(ArticleForm, self).__init__(*args, **kwargs)
+
+
+class ProductForm(TranslationModelForm):
+    class Meta:
+        model = models.Product
+        fields = ('title', 'slug','content', 'main_picture', 'product_type', 'category', 'draft')
+        labels = {
+            'title': _('Title:'),
+            'slug': _('Slug'),
+            'content': _('Content:'),
+            'main_picture': _('Main Picture:'),
+            'product_type': _('Main Picture:'),
+            'category': _('Category:'),
+            'draft': _('Draft:'),
+        }
