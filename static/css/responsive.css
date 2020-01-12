@@ -31,7 +31,7 @@
          margin: 0px;
     }
      .custom-select-box{
-         display: none;
+         /*display: none;*/
     }
      .attr-nav{
          top: 10px;
@@ -111,7 +111,7 @@
          font-size: 12px;
     }
      .custom-select-box{
-         display: none;
+         /*display: none;*/
     }
      .right-phone-box, .our-link{
          float: none;
@@ -236,7 +236,7 @@
          font-size: 9px;
     }
      .custom-select-box{
-         display: none;
+         /*display: none;*/
     }
      .right-phone-box, .our-link{
          float: none;

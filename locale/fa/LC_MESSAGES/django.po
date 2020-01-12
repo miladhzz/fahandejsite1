@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-10 20:19+0000\n"
+"POT-Creation-Date: 2020-01-12 19:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,31 +57,74 @@ msgstr "تعداد کاراکترها بیشتر از حد مجاز است."
 msgid "This field is required."
 msgstr "پر کردن این فیلد اجباری است."
 
-#: .\adminsite\templates\base-admin.html:66
-msgid "Menus"
-msgstr "منوها"
+#: .\adminsite\forms.py:36 .\adminsite\forms.py:59
+msgid "Title:"
+msgstr "عنوان:"
 
-#: .\adminsite\templates\base-admin.html:67
-msgid "Logout"
-msgstr "خروج"
+#: .\adminsite\forms.py:37 .\adminsite\forms.py:60
+msgid "Slug"
+msgstr "آدرس سئو"
 
-#: .\adminsite\templates\change-settings.html:8
-msgid "Change site settings"
-msgstr "تغییر تنظیمات سایت"
+#: .\adminsite\forms.py:38
+msgid "Subtitle:"
+msgstr "زیر عنوان:"
 
+#: .\adminsite\forms.py:39 .\adminsite\forms.py:61
+msgid "Content:"
+msgstr "محتوا:"
+
+#: .\adminsite\forms.py:40 .\adminsite\forms.py:62 .\adminsite\forms.py:63
+msgid "Main Picture:"
+msgstr "تصویر اصلی:"
+
+#: .\adminsite\forms.py:41 .\adminsite\forms.py:64
+msgid "Category:"
+msgstr "دسته بندی:"
+
+#: .\adminsite\forms.py:42 .\adminsite\forms.py:65
+msgid "Draft:"
+msgstr "پیش نویس:"
+
+#: .\adminsite\templates\add-article.html:4
+#: .\adminsite\templates\add-article.html:8
+msgid "Add Article"
+msgstr "اضافه کردن مقاله"
+
+#: .\adminsite\templates\add-article.html:14
+#: .\adminsite\templates\add-product.html:14
 #: .\adminsite\templates\change-settings.html:14
 msgid "Save Changes"
 msgstr "دخیره تغییرات"
 
-#: .\fahandejsite1\settings.py:136
+#: .\adminsite\templates\add-product.html:4
+#: .\adminsite\templates\add-product.html:8
+msgid "Add Product"
+msgstr "اضافه کردن محصول"
+
+#: .\adminsite\templates\base-admin.html:67
+msgid "Menus"
+msgstr "منوها"
+
+#: .\adminsite\templates\base-admin.html:68
+msgid "Logout"
+msgstr "خروج"
+
+#: .\adminsite\templates\change-settings.html:4
+#: .\adminsite\templates\change-settings.html:8
+#, fuzzy
+#| msgid "Change site settings"
+msgid "Change Site Settings"
+msgstr "تغییر تنظیمات سایت"
+
+#: .\fahandejsite1\settings.py:137
 msgid "Farsi"
 msgstr ""
 
-#: .\fahandejsite1\settings.py:137
+#: .\fahandejsite1\settings.py:138
 msgid "English"
 msgstr ""
 
-#: .\fahandejsite1\settings.py:138
+#: .\fahandejsite1\settings.py:139
 msgid "Russian"
 msgstr ""
 
@@ -94,26 +137,6 @@ msgstr "درباره ما"
 #: .\website\templates\article_detail.html:12
 msgid "Article Detail"
 msgstr "محتوای مقاله"
-
-#: .\website\templates\article_detail.html:34
-#: .\website\templates\product_detail.html:64
-msgid "Comments"
-msgstr "نظرات"
-
-#: .\website\templates\article_detail.html:44
-#: .\website\templates\product_detail.html:74
-msgid "Posted by"
-msgstr "ارسال شده توسط"
-
-#: .\website\templates\article_detail.html:44
-#: .\website\templates\product_detail.html:74
-msgid "on"
-msgstr "در"
-
-#: .\website\templates\article_detail.html:49
-#: .\website\templates\product_detail.html:79
-msgid "Leave a Comment"
-msgstr "نظر دهید"
 
 #: .\website\templates\base.html:85
 msgid "Home"

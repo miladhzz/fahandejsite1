@@ -7,3 +7,4 @@ secret.json
 .idea/workspace.xml___jb_old___
 /media
 secret_dev.json
+*.pyc
