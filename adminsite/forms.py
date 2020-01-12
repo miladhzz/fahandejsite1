@@ -54,7 +54,7 @@ class ArticleForm(TranslationModelForm):
 class ProductForm(TranslationModelForm):
     class Meta:
         model = models.Product
-        fields = ('title', 'slug','content', 'main_picture', 'product_type', 'category', 'draft')
+        fields = ('title', 'slug', 'content', 'main_picture', 'product_type', 'category', 'draft')
         labels = {
             'title': _('Title:'),
             'slug': _('Slug'),

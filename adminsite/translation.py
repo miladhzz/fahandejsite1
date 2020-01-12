@@ -10,13 +10,13 @@ class SiteSettingTranslationOptions(TranslationOptions):
 
 @register(models.Article)
 class ArticleTranslationOptions(TranslationOptions):
-    fields = ('title', 'slug', 'subtitle', 'content')
-    required_languages = {'fa': ('title', 'slug', 'content')}
+    fields = ('title', 'subtitle', 'content')
+    required_languages = {'fa': ('title','content')}
 
 
 @register(models.Product)
 class ProductTranslationOptions(TranslationOptions):
-    fields = ('title', 'slug', 'content')
-    required_languages = {'fa': ('title', 'slug', 'content')}
+    fields = ('title', 'content')
+    required_languages = {'fa': ('title', 'content')}
 
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-12 19:02+0000\n"
+"POT-Creation-Date: 2020-01-12 19:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -93,6 +93,8 @@ msgstr "اضافه کردن مقاله"
 #: .\adminsite\templates\add-article.html:14
 #: .\adminsite\templates\add-product.html:14
 #: .\adminsite\templates\change-settings.html:14
+#: .\adminsite\templates\edit-article.html:14
+#: .\adminsite\templates\edit-product.html:14
 msgid "Save Changes"
 msgstr "دخیره تغییرات"
 
@@ -115,6 +117,17 @@ msgstr "خروج"
 #| msgid "Change site settings"
 msgid "Change Site Settings"
 msgstr "تغییر تنظیمات سایت"
+
+#: .\adminsite\templates\edit-article.html:4
+#: .\adminsite\templates\edit-article.html:8
+msgid "Edit Article"
+msgstr "ویرایش مقاله"
+
+
+#: .\adminsite\templates\edit-product.html:4
+#: .\adminsite\templates\edit-product.html:8
+msgid "Edit Product"
+msgstr "ویرایش محصول"
 
 #: .\fahandejsite1\settings.py:137
 msgid "Farsi"

@@ -1,0 +1,17 @@
+{% extends "base-admin.html" %}
+{% load static %}
+{% load i18n %}
+{% block title%} {% trans 'Edit Product' %} {% endblock %}
+
+{% block content %}
+    <div class="container" dir="rtl">
+        <h1>{% trans 'Edit Product' %}</h1>
+
+        <form action="." method="post" novalidate enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.media}}
+            {{ form.as_ul}}
+            <input class="btn btn-primary" type="submit" value="{% trans 'Save Changes' %}" />
+        </form>
+    </div>
+{% endblock %}

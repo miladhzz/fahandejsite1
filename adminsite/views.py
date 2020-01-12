@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from website import models
 from . import forms
 from django.contrib.auth import logout
@@ -32,10 +32,23 @@ def add_article(request):
             article = form.save(commit=False)
             article.author = request.user
             article.save()
-            # todo send to edit article
     else:
         form = forms.ArticleForm()
     return render(request, 'add-article.html', {'form': form})
+
+
+@login_required
+def edit_article(request, pk):
+    article = get_object_or_404(models.Article, pk=pk)
+    if request.method == 'POST':
+        form = forms.ArticleForm(request.POST, request.FILES, instance=article)
+        if form.is_valid():
+            article = form.save(commit=False)
+            article.author = request.user
+            article.save()
+    else:
+        form = forms.ArticleForm(instance=article)
+    return render(request, 'edit-article.html', {'form': form})
 
 
 @login_required
@@ -46,7 +59,20 @@ def add_product(request):
             product = form.save(commit=False)
             product.author = request.user
             product.save()
-            # todo send to edit product
     else:
         form = forms.ProductForm()
     return render(request, 'add-product.html', {'form': form})
+
+
+@login_required
+def edit_product(request, pk):
+    product = get_object_or_404(models.Product, pk=pk)
+    if request.method == 'POST':
+        form = forms.ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            product = form.save(commit=False)
+            product.author = request.user
+            product.save()
+    else:
+        form = forms.ProductForm(instance=product)
+    return render(request, 'edit-product.html', {'form': form})
