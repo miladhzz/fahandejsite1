@@ -1,15 +1,15 @@
 {% extends "base-admin.html" %}
 {% load static %}
 {% load i18n %}
-{% block title%} ویرایش تنظیمات {% endblock %}
+{% block title%} {% trans 'Change Site Settings' %} {% endblock %}
 
 {% block content %}
     <div class="container" dir="rtl">
-        <h1>{% trans 'Change site settings' %}</h1>
-        {{ form.non_field_errors }}
+        <h1>{% trans 'Change Site Settings' %}</h1>
 
         <form action="." method="post" novalidate>
             {% csrf_token %}
+            {{ form.media}}
             {{ form.as_ul}}
             <input class="btn btn-primary" type="submit" value="{% trans 'Save Changes' %}" />
         </form>

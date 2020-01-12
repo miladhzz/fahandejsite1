@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from website import models
-from .forms import SiteSettingsForm
+from . import forms
 from django.contrib.auth import logout
 
 
@@ -9,12 +9,12 @@ from django.contrib.auth import logout
 def update_settings(request):
     setting = models.SiteSetting.objects.all().first()
     if request.method == 'POST':
-        form = SiteSettingsForm(request.POST, instance=setting)
+        form = forms.SiteSettingsForm(request.POST, instance=setting)
         if form.is_valid():
             setting = form.save()
             setting.save()
     else:
-        form = SiteSettingsForm(instance=setting)
+        form = forms.SiteSettingsForm(instance=setting)
     return render(request, 'change-settings.html', {'form': form})
 
 
@@ -22,3 +22,17 @@ def update_settings(request):
 def logout_user(request):
     logout(request)
     return redirect('website:index')
+
+
+@login_required
+def add_article(request):
+    if request.method == 'POST':
+        form = forms.ArticleForm(request.POST, request.FILES)
+        if form.is_valid():
+            article = form.save(commit=False)
+            article.author = request.user
+            article.save()
+            # todo send to edit article
+    else:
+        form = forms.ArticleForm()
+    return render(request, 'add-article.html', {'form': form})
