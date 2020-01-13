@@ -6,6 +6,11 @@ from django.contrib.auth import logout
 
 
 @login_required
+def admin_index(request):
+    return render(request, 'admin-index.html')
+
+
+@login_required
 def update_settings(request):
     setting = models.SiteSetting.objects.all().first()
     if request.method == 'POST':
@@ -49,6 +54,12 @@ def edit_article(request, pk):
     else:
         form = forms.ArticleForm(instance=article)
     return render(request, 'edit-article.html', {'form': form})
+
+
+@login_required
+def list_product(request):
+    product_list = models.Product.objects.all()
+    return render(request, 'list-product.html', {'product_list': product_list})
 
 
 @login_required

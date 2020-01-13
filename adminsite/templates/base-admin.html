@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>جدول ها | کنترل پنل</title>
+  <title>{% block title %} {% endblock %}</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -74,7 +74,7 @@
                   <a href="#" class="btn btn-default btn-flat">پروفایل</a>
                 </div>
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">خروج</a>
+                  <a href="{% url 'adminsite:logout' %}" class="btn btn-default btn-flat">خروج</a>
                 </div>
               </li>
             </ul>
@@ -93,10 +93,22 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li>
           <a href="../../pages/widgets.html">
-            <i class="fa fa-th"></i> <span>ویجت ها</span>
-            <span class="pull-left-container">
-              <small class="label pull-left bg-green">جدید</small>
-            </span>
+            <i class="fa fa-th"></i> <span>محصولات</span>
+          </a>
+        </li>
+        <li>
+          <a href="../../pages/widgets.html">
+            <i class="fa fa-th"></i> <span>مقاله ها</span>
+          </a>
+        </li>
+        <li>
+          <a href="../../pages/widgets.html">
+            <i class="fa fa-th"></i> <span>تنظیمات کلی سایت</span>
+          </a>
+        </li>
+        <li>
+          <a href="../../pages/widgets.html">
+            <i class="fa fa-th"></i> <span>پیام های دریافتی</span>
           </a>
         </li>
       </ul>
@@ -107,58 +119,12 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        جدول ها
-        <small>پیشرفته</small>
-      </h1>
-    </section>
+   {% block content_header %}
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">جدول داده ها مثال ۱</h3>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <table id="example2" class="table table-bordered table-hover">
-                <thead>
-                <tr>
-                  <th>موتور رندر</th>
-                  <th>مرورگر</th>
-                  <th>سیستم عامل</th>
-                  <th>ورژن</th>
-                  <th>امتیاز</th>
-                </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td>X</td>
-                  </tr>
-                </tbody>
+{% endblock %}
+{% block content %}     
 
-              </table>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-          <!-- /.box -->
-        </div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
-    </section>
-    <!-- /.content -->
+{% endblock %}
   </div>
 
 </div>
