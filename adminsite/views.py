@@ -30,6 +30,12 @@ def logout_user(request):
 
 
 @login_required
+def list_article(request):
+    article_list = models.Article.objects.all()
+    return render(request, 'list-article.html', {'article_list': article_list})
+
+
+@login_required
 def add_article(request):
     if request.method == 'POST':
         form = forms.ArticleForm(request.POST, request.FILES)
