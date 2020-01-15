@@ -19,30 +19,58 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">جدول داده ها مثال ۱</h3>
+              <h3 class="box-title">مقالات</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                  <th>موتور رندر</th>
-                  <th>مرورگر</th>
-                  <th>سیستم عامل</th>
-                  <th>ورژن</th>
-                  <th>امتیاز</th>
+                  <th>عنوان</th>
+                  <th>نویسنده</th>
+                  <th>دسته بندی</th>
+                  <th>محتوای انگلیسی</th>
+                  <th>محتوای روسی</th>
+                  <th>تاریخ انتشار</th>
+                  <th>پیش نویس</th>
                 </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td>X</td>
-                  </tr>
+                    {% for article in article_list%}
+                        <tr>
+                            <td>
+                                <span>{{ article.title }}</span>
+                            </td>
+                            <td>
+                                <span>{{ article.author }}</span>
+                            </td>
+                            <td>
+                                <span>{{ article.category }}</span>
+                            </td>
+                            <td>
+                                {% if article.title_en %}
+                                    <span>دارد</span>
+                                {% else %}
+                                    <span><a href="#">افزودن</a></span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if article.title_ru %}
+                                    <span>دارد</span>
+                                {% else %}
+                                    <span><a href="#">افزودن</a></span>
+                                {% endif %}
+                            </td>
+                            <td>{{ article.update_date }}</td>
+                            <td>
+                                {% if article.draft %}
+                                    <input type="checkbox" checked disabled>
+                                {% else %}
+                                    <input type="checkbox" disabled>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
                 </tbody>
 
               </table>
