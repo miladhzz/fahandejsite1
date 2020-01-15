@@ -50,15 +50,15 @@
                             <td>
                                 {% if article.title_en %}
                                     <span>دارد</span>
-                                {% else %}
-                                    <span><a href="#">افزودن</a></span>
+                                {% else %}                                    
+                                    <a href="../../../en/admin/edit-article/{{ article.id }}">افزودن</a>
                                 {% endif %}
                             </td>
                             <td>
                                 {% if article.title_ru %}
                                     <span>دارد</span>
-                                {% else %}
-                                    <span><a href="#">افزودن</a></span>
+                                {% else %}                                    
+                                    <a href="../../../ru/admin/edit-article/{{ article.id }}">افزودن</a>
                                 {% endif %}
                             </td>
                             <td>{{ article.update_date }}</td>
