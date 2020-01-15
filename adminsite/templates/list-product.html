@@ -50,8 +50,14 @@
                             <td>
                                 {% if product.title_en %}
                                     <span>دارد</span>
-                                {% else %}
-                                    <span><a href="#">افزودن</a></span>
+                                {% else %}                                    
+                                    {% comment %} <form action="{% url 'set_language' %}" method="post">
+                                        {% csrf_token %}
+                                        <input name="next" type="hidden" value="{{ redirect_to }}">
+                                        <input name="language" type="text"  value="en">                                        
+                                        <input type="submit" id="change_language"  value="Go">
+                                    </form> {% endcomment %}
+                                    <a href="../../../en/admin/edit-product/{{ product.id }}">افزودن</a>
                                 {% endif %}
                             </td>
                             <td>
