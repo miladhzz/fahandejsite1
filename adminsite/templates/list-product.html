@@ -26,23 +26,51 @@
               <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                  <th>موتور رندر</th>
-                  <th>مرورگر</th>
-                  <th>سیستم عامل</th>
-                  <th>ورژن</th>
-                  <th>امتیاز</th>
+                  <th>عنوان</th>
+                  <th>نویسنده</th>
+                  <th>دسته بندی</th>
+                  <th>محتوای انگلیسی</th>
+                  <th>محتوای روسی</th>
+                  <th>تاریخ انتشار</th>
+                  <th>پیش نویس</th>
                 </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td>X</td>
-                  </tr>
+                  {% for product in product_list%}
+                        <tr>
+                            <td>
+                                <span><a href="{% url 'adminsite:edit_product' product.id %}">{{ product.title }}</a></span>
+                            </td>
+                            <td>
+                                <span>{{ product.author }}</span>
+                            </td>
+                            <td>
+                                <span>{{ product.category }}</span>
+                            </td>
+                            <td>
+                                {% if product.title_en %}
+                                    <span>دارد</span>
+                                {% else %}
+                                    <span><a href="#">افزودن</a></span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if product.title_ru %}
+                                    <span>دارد</span>
+                                {% else %}
+                                    <span><a href="#">افزودن</a></span>
+                                {% endif %}
+                            </td>
+                            <td>{{ product.update_date }}</td>
+                            <td>
+                                {% if product.draft %}
+                                    <input type="checkbox" checked disabled>
+                                {% else %}
+                                    <input type="checkbox" disabled>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
                 </tbody>
 
               </table>

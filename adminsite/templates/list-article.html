@@ -39,7 +39,7 @@
                     {% for article in article_list%}
                         <tr>
                             <td>
-                                <span>{{ article.title }}</span>
+                                <span><a href="{% url 'adminsite:edit_article' article.id %}">{{ article.title }}</a></span>
                             </td>
                             <td>
                                 <span>{{ article.author }}</span>

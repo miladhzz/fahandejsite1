@@ -60,7 +60,7 @@ class ProductForm(TranslationModelForm):
             'slug': _('Slug'),
             'content': _('Content:'),
             'main_picture': _('Main Picture:'),
-            'product_type': _('Main Picture:'),
+            'product_type': _('Product Type:'),
             'category': _('Category:'),
             'draft': _('Draft:'),
         }
