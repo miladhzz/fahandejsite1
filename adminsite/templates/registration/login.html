@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,30 +17,29 @@
     <link rel="stylesheet" href="{% static 'adminsite/css/ionicons.min.css' %}">
     <!-- DataTables -->
     <link rel="stylesheet" href="{% static 'adminsite/css/dataTables.bootstrap.min.css'%}">
+
+    <link rel="stylesheet" href="{% static 'adminsite/css/AdminLTE.css'%}">
 </head>
-<body>
-    <div class="product-big-title-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="product-bit-title text-center">
-                        <h2>ورود</h2>
-                    </div>
-                </div>
-            </div>
+
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <h2>ورود به سایت</h2>
+        </div>
+        <div class="login-box-body">
+            
+                <form method="POST">
+                    {% csrf_token %}
+                    <p>
+                        <label>نام کاربری</label>
+                        <input class="form-control" type="text" name="username">
+                    </p>
+                    <p>
+                        <label>رمز عبور</label>
+                        <input class="form-control" type="password" name="password">
+                    </p>
+                    <button class="btn btn-primary btn-block btn-flat" type="submit">ورود</button>
+                </form>
         </div>
     </div>
-    <form method="POST">
-        {% csrf_token %}
-        <p>
-            <label>نام کاربری</label>
-            <input class="form-control" type="text" name="username">
-        </p>
-        <p>
-            <label>رمز عبور</label>
-            <input type="password" name="password">
-        </p>
-        <button type="submit">ورود</button>
-    </form>
 </body>
-
