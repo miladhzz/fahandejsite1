@@ -22,7 +22,7 @@ def index(request):
     product_middle = models.Product.objects.order_by('?').filter(category__name='product middle', draft=False)
 
     # Article 3 Bottom
-    article_3_bottom = models.Article.objects.filter(category__name='3 Bottom Article')[:3]
+    article_3_bottom = models.Article.objects.filter(category__name='3 Bottom Article', draft=False)[:3]
 
     # print(article_3_bottom)
     # activate('fa')

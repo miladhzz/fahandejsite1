@@ -1,14 +1,14 @@
 {% extends "base-admin.html" %}
 {% load static %}
 {% load i18n %}
-{% block title%} لیست محصولات {% endblock %}
+{% block title%} لیست مقالات {% endblock %}
 
 {% block content_header %}
 <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        محصولات
-        <small><a class="btn btn-primary" href="{% url 'adminsite:add_product' %}">اضافه کردن محصول</a></small>
+        مقالات
+        <small><a href="{% url 'adminsite:add_article' %}">اضافه کردن مقاله</a></small>
       </h1>
     </section>
 {% endblock %}
@@ -19,7 +19,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">جدول داده ها مثال ۱</h3>
+              <h3 class="box-title">مقالات</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -36,34 +36,34 @@
                 </tr>
                 </thead>
                 <tbody>
-                  {% for product in product_list%}
+                    {% for article in article_list%}
                         <tr>
                             <td>
-                                <span><a href="{% url 'adminsite:edit_product' product.id %}">{{ product.title }}</a></span>
+                                <span><a href="{% url 'adminsite:edit_article' article.id %}">{{ article.title }}</a></span>
                             </td>
                             <td>
-                                <span>{{ product.author }}</span>
+                                <span>{{ article.author }}</span>
                             </td>
                             <td>
-                                <span>{{ product.category }}</span>
+                                <span>{{ article.category }}</span>
                             </td>
                             <td>
-                                {% if product.title_en %}
+                                {% if article.title_en %}
                                     <span>دارد</span>
                                 {% else %}                                    
-                                    <a href="../../../en/admin/edit-product/{{ product.id }}">افزودن</a>
+                                    <a href="../../../en/admin/edit-article/{{ article.id }}">افزودن</a>
                                 {% endif %}
                             </td>
                             <td>
-                                {% if product.title_ru %}
+                                {% if article.title_ru %}
                                     <span>دارد</span>
                                 {% else %}                                    
-                                    <a href="../../../ru/admin/edit-product/{{ product.id }}">افزودن</a>
+                                    <a href="../../../ru/admin/edit-article/{{ article.id }}">افزودن</a>
                                 {% endif %}
                             </td>
-                            <td>{{ product.update_date }}</td>
+                            <td>{{ article.update_date }}</td>
                             <td>
-                                {% if product.draft %}
+                                {% if article.draft %}
                                     <input type="checkbox" checked disabled>
                                 {% else %}
                                     <input type="checkbox" disabled>
