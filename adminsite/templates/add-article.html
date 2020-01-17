@@ -4,14 +4,24 @@
 {% block title%} {% trans 'Add Article' %} {% endblock %}
 
 {% block content %}
-    <div class="container" dir="rtl">
-        <h1>{% trans 'Add Article' %}</h1>
+<div class="container" dir="rtl">
+    <div class="box box-primary addProduct">
+        <div class="box-header with-border">
+            <h3 class="box-title">{% trans 'Add Article' %}</h3>
+        </div>
 
-        <form action="." method="post" novalidate enctype="multipart/form-data">
+
+        <form class="box-body" action="." method="post" novalidate enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.media}}
             {{ form.as_ul}}
-            <input class="btn btn-primary" type="submit" value="{% trans 'Save Changes' %}" />
+
+            <div class="box-footer">
+                <input class="btn btn-primary" type="submit" value="{% trans 'Save Changes' %}" />
+            </div>
+            
         </form>
     </div>
+
+</div>
 {% endblock %}

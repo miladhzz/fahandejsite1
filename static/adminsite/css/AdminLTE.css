@@ -1729,7 +1729,7 @@ a:focus {
   margin: 10px;
 }
 
-#id_title, #id_slug{
+#id_title, #id_slug, #id_address, #id_phone, #id_mobile, #id_small_about, #id_postal_code, #id_email{
   border-radius: 2px;
   box-shadow: none;
   border-color: #d2d6de;

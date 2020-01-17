@@ -4,14 +4,24 @@
 {% block title%} {% trans 'Change Site Settings' %} {% endblock %}
 
 {% block content %}
-    <div class="container" dir="rtl">
-        <h1>{% trans 'Change Site Settings' %}</h1>
+<div class="container" dir="rtl">
+    <div class="box box-primary addProduct">
+        <div class="box-header with-border">
+            <h3 class="box-title">{% trans 'Change Site Settings' %}</h3>
+        </div>
 
-        <form action="." method="post" novalidate>
+
+        <form class="box-body" action="." method="post" novalidate>
             {% csrf_token %}
             {{ form.media}}
             {{ form.as_ul}}
-            <input class="btn btn-primary" type="submit" value="{% trans 'Save Changes' %}" />
+
+            <div class="box-footer">
+                <input class="btn btn-primary" type="submit" value="{% trans 'Save Changes' %}" />
+            </div>
+            
         </form>
     </div>
+
+</div>
 {% endblock %}
