@@ -19,7 +19,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">جدول داده ها مثال ۱</h3>
+              <h3 class="box-title">محصولات</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -49,16 +49,16 @@
                             </td>
                             <td>
                                 {% if product.title_en %}
-                                    <span>دارد</span>
+                                <a href="../../../en/admin/edit-product/{{ product.id }}">دارد - ویرایش</a>
                                 {% else %}                                    
-                                    <a href="../../../en/admin/edit-product/{{ product.id }}">افزودن</a>
+                                  <a href="../../../en/admin/edit-product/{{ product.id }}">افزودن</a>
                                 {% endif %}
                             </td>
                             <td>
                                 {% if product.title_ru %}
-                                    <span>دارد</span>
+                                  <a href="../../../ru/admin/edit-product/{{ product.id }}">دارد - ویرایش</a>
                                 {% else %}                                    
-                                    <a href="../../../ru/admin/edit-product/{{ product.id }}">افزودن</a>
+                                  <a href="../../../ru/admin/edit-product/{{ product.id }}">افزودن</a>
                                 {% endif %}
                             </td>
                             <td>{{ product.update_date }}</td>

@@ -49,14 +49,14 @@
                             </td>
                             <td>
                                 {% if article.title_en %}
-                                    <span>دارد</span>
+                                <a href="../../../en/admin/edit-article/{{ article.id }}">دارد - ویرایش</a>
                                 {% else %}                                    
                                     <a href="../../../en/admin/edit-article/{{ article.id }}">افزودن</a>
                                 {% endif %}
                             </td>
                             <td>
                                 {% if article.title_ru %}
-                                    <span>دارد</span>
+                                <a href="../../../ru/admin/edit-article/{{ article.id }}">دارد - ویرایش</a>
                                 {% else %}                                    
                                     <a href="../../../ru/admin/edit-article/{{ article.id }}">افزودن</a>
                                 {% endif %}
