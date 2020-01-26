@@ -1,0 +1,1 @@
+from fahandejsite1.wsgi import application
