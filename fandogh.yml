@@ -3,6 +3,7 @@ name: fahandejsite1
 spec:
   image_pull_policy: Always
   port: 80
+  allow_http: false
   source:
     context: .
     media_path: media
