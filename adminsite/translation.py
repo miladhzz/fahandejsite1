@@ -20,3 +20,7 @@ class ProductTranslationOptions(TranslationOptions):
     required_languages = {'fa': ('title', 'content')}
 
 
+@register(models.Slider)
+class SliderTranslationOptions(TranslationOptions):
+    fields = ('title', 'subtitle')
+    required_languages = {'fa': ('title', 'subtitle')}
