@@ -157,4 +157,4 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/home/fahandej/public_html/media'
+MEDIA_URL = '/home/fahandej/public_html/media/'
