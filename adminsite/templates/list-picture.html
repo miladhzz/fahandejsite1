@@ -1,0 +1,66 @@
+{% extends "base-admin.html" %}
+{% load static %}
+{% load i18n %}
+{% block title%} لیست تصاویر {% endblock %}
+
+{% block content_header %}
+<!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        تصاویر
+        <small><a class="btn btn-primary" href="{% url 'adminsite:add_picture' %}">اضافه کردن تصویر</a></small>
+      </h1>
+    </section>
+{% endblock %}
+{% block content %}     
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">تصاویر</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>نام</th>
+                  <th>تصویر</th>                  
+                  <th>تاریخ درج</th>
+                  <th>آدرس تصویر</th>
+                </tr>
+                </thead>
+                <tbody>
+                  {% for picture in picture_list%}
+                        <tr>
+                            <td>
+                                <span>{{ picture.name }}</span>
+                            </td>                                                        
+                            <td>
+                                <img src="{{ picture.picture.url }}" width="50" />
+                            </td>
+                            <td>
+                                {{ picture.create_time }}
+                            </td>
+                            <td>
+                                <input type="text" value="{{ picture.picture.url }}" readonly>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+{% endblock %}

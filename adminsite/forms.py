@@ -64,3 +64,11 @@ class ProductForm(TranslationModelForm):
             'category': _('Category:'),
             'draft': _('Draft:'),
         }
+
+
+class PictureForm(forms.ModelForm):
+    
+    class Meta:
+        model = models.Picture
+        fields = ('name','picture')
+

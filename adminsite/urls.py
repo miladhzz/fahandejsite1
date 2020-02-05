@@ -13,4 +13,6 @@ urlpatterns = [
     path('list-product/', views.list_product, name="list_product"),
     path('add-product/', views.add_product, name="add_product"),
     path('edit-product/<int:pk>/', views.edit_product, name="edit_product"),
+    path('add-picture/', views.add_picture, name="add_picture"),
+    path('list-picture/', views.list_picture, name="list_picture"),
 ]

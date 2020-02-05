@@ -93,3 +93,22 @@ def edit_product(request, pk):
     else:
         form = forms.ProductForm(instance=product)
     return render(request, 'edit-product.html', {'form': form})
+
+
+@login_required
+def add_picture(request):
+    if request.method == 'POST':
+        form = forms.PictureForm(request.POST, request.FILES)
+        if form.is_valid():
+            picture = form.save(commit=False)
+            picture.author = request.user
+            picture.save()
+    else:
+        form = forms.PictureForm()
+    return render(request, 'add-picture.html', {'form': form})
+
+
+@login_required
+def list_picture(request):
+    picture_list = models.Picture.objects.all()
+    return render(request, 'list-picture.html', {'picture_list': picture_list})

@@ -1,0 +1,27 @@
+{% extends "base-admin.html" %}
+{% load static %}
+{% load i18n %}
+{% block title%} اضافه کردن تصویر {% endblock %}
+
+{% block content %}
+<div class="container" dir="rtl">
+    <div class="box box-primary addPicture">
+        <div class="box-header with-border">
+            <h3 class="box-title">اضافه کردن تصویر</h3>
+        </div>
+        
+
+        <form class="box-body" action="." method="post" novalidate enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.media}}
+            {{ form.as_ul}}
+            
+            <div class="box-footer">
+                <input class="btn btn-primary" type="submit" value="ذخیره تصویر" />
+            </div>
+            
+        </form>
+    </div>
+
+</div>
+{% endblock %}
