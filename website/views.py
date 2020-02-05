@@ -5,7 +5,7 @@ from django.core.exceptions import ObjectDoesNotExist
 
 
 def index(request):
-    sliders = models.Slider.objects.all()[:3]
+    sliders = models.Slider.objects.all()[:4]
     # gallery_footer
     try:
         gallery_footer = models.Gallery.objects.get(category__name='Gallery Footer').pictures.all()

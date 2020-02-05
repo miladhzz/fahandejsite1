@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-09 19:11+0000\n"
+"POT-Creation-Date: 2020-02-05 13:24+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,57 +20,201 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\fahandejsite1\settings.py:131
-msgid "Farsi"
+#: .\adminsite\forms.py:12 .\website\templates\base.html:146
+#: .\website\templates\contact_us.html:68
+msgid "Address:"
 msgstr ""
 
-#: .\fahandejsite1\settings.py:132
-msgid "English"
+#: .\adminsite\forms.py:13 .\website\templates\base.html:149
+#: .\website\templates\contact_us.html:71
+msgid "Phone:"
+msgstr ""
+
+#: .\adminsite\forms.py:14
+msgid "Mobile:"
+msgstr ""
+
+#: .\adminsite\forms.py:15
+msgid "Small About:"
+msgstr ""
+
+#: .\adminsite\forms.py:16
+msgid "Complete About:"
+msgstr ""
+
+#: .\adminsite\forms.py:17
+msgid "Postal Code:"
+msgstr ""
+
+#: .\adminsite\forms.py:18 .\website\templates\base.html:152
+#: .\website\templates\contact_us.html:74
+msgid "Email:"
+msgstr ""
+
+#: .\adminsite\forms.py:25
+msgid "Too many characters."
+msgstr ""
+
+#: .\adminsite\forms.py:26
+msgid "This field is required."
+msgstr ""
+
+#: .\adminsite\forms.py:36 .\adminsite\forms.py:59
+msgid "Title:"
+msgstr ""
+
+#: .\adminsite\forms.py:37 .\adminsite\forms.py:60
+msgid "Slug"
+msgstr ""
+
+#: .\adminsite\forms.py:38
+msgid "Subtitle:"
+msgstr ""
+
+#: .\adminsite\forms.py:39 .\adminsite\forms.py:61
+msgid "Content:"
+msgstr ""
+
+#: .\adminsite\forms.py:40 .\adminsite\forms.py:62
+msgid "Main Picture:"
+msgstr ""
+
+#: .\adminsite\forms.py:41 .\adminsite\forms.py:64
+msgid "Category:"
+msgstr ""
+
+#: .\adminsite\forms.py:42 .\adminsite\forms.py:65
+msgid "Draft:"
+msgstr ""
+
+#: .\adminsite\forms.py:63
+msgid "Product Type:"
+msgstr ""
+
+#: .\adminsite\templates\add-article.html:4
+#: .\adminsite\templates\add-article.html:10
+msgid "Add Article"
+msgstr ""
+
+#: .\adminsite\templates\add-article.html:20
+#: .\adminsite\templates\add-product.html:20
+#: .\adminsite\templates\change-settings.html:20
+#: .\adminsite\templates\edit-article.html:14
+#: .\adminsite\templates\edit-product.html:14
+msgid "Save Changes"
+msgstr ""
+
+#: .\adminsite\templates\add-product.html:4
+#: .\adminsite\templates\add-product.html:10
+msgid "Add Product"
+msgstr ""
+
+#: .\adminsite\templates\admin-index.html:4
+msgid "Admin"
+msgstr ""
+
+#: .\adminsite\templates\base-admin_.html:67
+msgid "Menus"
+msgstr ""
+
+#: .\adminsite\templates\base-admin_.html:68
+msgid "Logout"
+msgstr ""
+
+#: .\adminsite\templates\change-settings.html:4
+#: .\adminsite\templates\change-settings.html:10
+msgid "Change Site Settings"
+msgstr ""
+
+#: .\adminsite\templates\edit-article.html:4
+#: .\adminsite\templates\edit-article.html:8
+msgid "Edit Article"
+msgstr ""
+
+#: .\adminsite\templates\edit-product.html:4
+#: .\adminsite\templates\edit-product.html:8
+msgid "Edit Product"
 msgstr ""
 
 #: .\fahandejsite1\settings.py:133
+msgid "Farsi"
+msgstr ""
+
+#: .\fahandejsite1\settings.py:134
+msgid "English"
+msgstr ""
+
+#: .\fahandejsite1\settings.py:135
 msgid "Russian"
 msgstr ""
 
-#: .\website\templates\about.html:4
-msgid "About US"
-msgstr ""
-
-#: .\website\templates\article_detail.html:4
-msgid "Article Detail"
-msgstr ""
-
-#: .\website\templates\base.html:80
-msgid "Home"
-msgstr ""
-
-#: .\website\templates\base.html:81 .\website\templates\base.html:132
+#: .\website\templates\about.html:4 .\website\templates\about.html:11
+#: .\website\templates\base.html:86 .\website\templates\base.html:137
 msgid "About Us"
 msgstr ""
 
-#: .\website\templates\base.html:82 .\website\templates\base.html:138
+#: .\website\templates\article_detail.html:4
+#: .\website\templates\article_detail.html:12
+msgid "Article Detail"
+msgstr ""
+
+#: .\website\templates\base.html:85
+msgid "Home"
+msgstr ""
+
+#: .\website\templates\base.html:87 .\website\templates\base.html:143
 #: .\website\templates\contact_us.html:4
 msgid "Contact Us"
 msgstr ""
 
-#: .\website\templates\base.html:124
+#: .\website\templates\base.html:110
+msgid "Search"
+msgstr ""
+
+#: .\website\templates\base.html:129
 msgid "About Fahandej"
 msgstr ""
 
-#: .\website\templates\base.html:130
+#: .\website\templates\base.html:135
 msgid "Links"
 msgstr ""
 
-#: .\website\templates\base.html:141
-msgid "Address:"
+#: .\website\templates\contact_us.html:25
+msgid "GET IN TOUCH"
 msgstr ""
 
-#: .\website\templates\base.html:144
-msgid "Phone:"
+#: .\website\templates\contact_us.html:26
+msgid ""
+"Our team is happy to answer your questions. Fill out the form and we’ll be "
+"in touch as soon as possible."
 msgstr ""
 
-#: .\website\templates\base.html:147
-msgid "Email:"
+#: .\website\templates\contact_us.html:31
+msgid "Your Name"
+msgstr ""
+
+#: .\website\templates\contact_us.html:37
+msgid "Your Email"
+msgstr ""
+
+#: .\website\templates\contact_us.html:43
+msgid "Subject"
+msgstr ""
+
+#: .\website\templates\contact_us.html:49
+msgid "Your Message"
+msgstr ""
+
+#: .\website\templates\contact_us.html:53
+msgid "Send Message"
+msgstr ""
+
+#: .\website\templates\contact_us.html:64
+msgid "CONTACT INFO"
+msgstr ""
+
+#: .\website\templates\index.html:17
+msgid "Show more"
 msgstr ""
 
 #: .\website\templates\index.html:68
@@ -96,4 +240,8 @@ msgstr ""
 #: .\website\templates\product_detail.html:4
 #: .\website\templates\product_detail.html:12
 msgid "Product Detail"
+msgstr ""
+
+#: .\website\templates\product_detail.html:55
+msgid "Description:"
 msgstr ""

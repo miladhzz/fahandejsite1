@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-12 19:52+0000\n"
+"POT-Creation-Date: 2020-02-05 13:24+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -73,7 +73,7 @@ msgstr "زیر عنوان:"
 msgid "Content:"
 msgstr "محتوا:"
 
-#: .\adminsite\forms.py:40 .\adminsite\forms.py:62 .\adminsite\forms.py:63
+#: .\adminsite\forms.py:40 .\adminsite\forms.py:62
 msgid "Main Picture:"
 msgstr "تصویر اصلی:"
 
@@ -85,34 +85,44 @@ msgstr "دسته بندی:"
 msgid "Draft:"
 msgstr "پیش نویس:"
 
+#: .\adminsite\forms.py:63
+#, fuzzy
+#| msgid "Product Detail"
+msgid "Product Type:"
+msgstr "جزئیات محصول"
+
 #: .\adminsite\templates\add-article.html:4
-#: .\adminsite\templates\add-article.html:8
+#: .\adminsite\templates\add-article.html:10
 msgid "Add Article"
 msgstr "اضافه کردن مقاله"
 
-#: .\adminsite\templates\add-article.html:14
-#: .\adminsite\templates\add-product.html:14
-#: .\adminsite\templates\change-settings.html:14
+#: .\adminsite\templates\add-article.html:20
+#: .\adminsite\templates\add-product.html:20
+#: .\adminsite\templates\change-settings.html:20
 #: .\adminsite\templates\edit-article.html:14
 #: .\adminsite\templates\edit-product.html:14
 msgid "Save Changes"
 msgstr "دخیره تغییرات"
 
 #: .\adminsite\templates\add-product.html:4
-#: .\adminsite\templates\add-product.html:8
+#: .\adminsite\templates\add-product.html:10
 msgid "Add Product"
 msgstr "اضافه کردن محصول"
 
-#: .\adminsite\templates\base-admin.html:67
+#: .\adminsite\templates\admin-index.html:4
+msgid "Admin"
+msgstr ""
+
+#: .\adminsite\templates\base-admin_.html:67
 msgid "Menus"
 msgstr "منوها"
 
-#: .\adminsite\templates\base-admin.html:68
+#: .\adminsite\templates\base-admin_.html:68
 msgid "Logout"
 msgstr "خروج"
 
 #: .\adminsite\templates\change-settings.html:4
-#: .\adminsite\templates\change-settings.html:8
+#: .\adminsite\templates\change-settings.html:10
 #, fuzzy
 #| msgid "Change site settings"
 msgid "Change Site Settings"
@@ -123,21 +133,20 @@ msgstr "تغییر تنظیمات سایت"
 msgid "Edit Article"
 msgstr "ویرایش مقاله"
 
-
 #: .\adminsite\templates\edit-product.html:4
 #: .\adminsite\templates\edit-product.html:8
 msgid "Edit Product"
 msgstr "ویرایش محصول"
 
-#: .\fahandejsite1\settings.py:137
+#: .\fahandejsite1\settings.py:133
 msgid "Farsi"
 msgstr ""
 
-#: .\fahandejsite1\settings.py:138
+#: .\fahandejsite1\settings.py:134
 msgid "English"
 msgstr ""
 
-#: .\fahandejsite1\settings.py:139
+#: .\fahandejsite1\settings.py:135
 msgid "Russian"
 msgstr ""
 
@@ -207,6 +216,10 @@ msgstr "ارسال پیام"
 #: .\website\templates\contact_us.html:64
 msgid "CONTACT INFO"
 msgstr "اطلاعات تماس"
+
+#: .\website\templates\index.html:17
+msgid "Show more"
+msgstr "نمایش جزئیات"
 
 #: .\website\templates\index.html:68
 msgid "Fruits & Vegetables"
