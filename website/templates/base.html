@@ -44,19 +44,23 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="custom-select-box">
-                        <form action="{% url 'set_language' %}" method="post">
+                        <form action="{% url 'set_language' %}" method="post" style="display: inline;">
                             {% csrf_token %}
                             <input name="next" type="hidden" value="{{ redirect_to }}">
-                            <select name="language" id="selected_language">
-                                {% get_available_languages as LANGUAGES %}
-                                {% get_language_info_list for LANGUAGES as languages %}
-                                {% for language in languages %}
-                                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                                        {{ language.name_local }} ({{ language.code }})
-                                    </option>
-                                {% endfor %}
-                            </select>
-                            <input type="submit" id="change_language" hidden value="Go">
+                            <input name="language" type="hidden" value="fa">
+                            <input type="image" src="{% static 'images/fa.png' %}" width="30">
+                        </form>
+                        <form action="{% url 'set_language' %}" method="post" style="display: inline;">
+                            {% csrf_token %}
+                            <input name="next" type="hidden" value="{{ redirect_to }}">
+                            <input name="language" type="hidden" value="en">
+                            <input type="image" src="{% static 'images/en.png' %}"  width="30">
+                        </form>
+                        <form action="{% url 'set_language' %}" method="post" style="display: inline;">
+                            {% csrf_token %}
+                            <input name="next" type="hidden" value="{{ redirect_to }}">
+                            <input name="language" type="hidden" value="ru">
+                            <input type="image" src="{% static 'images/ru.png' %}"  width="30">
                         </form>
                     </div>
                 </div>
