@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 08:34+0000\n"
+"POT-Creation-Date: 2020-03-12 13:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,12 +20,12 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\adminsite\forms.py:12 .\website\templates\base.html:146
+#: .\adminsite\forms.py:12 .\website\templates\base.html:147
 #: .\website\templates\contact_us.html:68
 msgid "Address:"
 msgstr ""
 
-#: .\adminsite\forms.py:13 .\website\templates\base.html:149
+#: .\adminsite\forms.py:13 .\website\templates\base.html:150
 #: .\website\templates\contact_us.html:71
 msgid "Phone:"
 msgstr ""
@@ -46,7 +46,7 @@ msgstr ""
 msgid "Postal Code:"
 msgstr ""
 
-#: .\adminsite\forms.py:18 .\website\templates\base.html:152
+#: .\adminsite\forms.py:18 .\website\templates\base.html:153
 #: .\website\templates\contact_us.html:74
 msgid "Email:"
 msgstr ""
@@ -149,7 +149,7 @@ msgid "Russian"
 msgstr ""
 
 #: .\website\templates\about.html:4 .\website\templates\about.html:11
-#: .\website\templates\base.html:86 .\website\templates\base.html:137
+#: .\website\templates\base.html:87 .\website\templates\base.html:138
 msgid "About Us"
 msgstr ""
 
@@ -162,20 +162,25 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: .\website\templates\base.html:87 .\website\templates\base.html:143
+#: .\website\templates\base.html:86 .\website\templates\product_list.html:4
+#: .\website\templates\product_list.html:12
+msgid "Product List"
+msgstr ""
+
+#: .\website\templates\base.html:88 .\website\templates\base.html:144
 #: .\website\templates\contact_us.html:4
 msgid "Contact Us"
 msgstr ""
 
-#: .\website\templates\base.html:110
+#: .\website\templates\base.html:111
 msgid "Search"
 msgstr ""
 
-#: .\website\templates\base.html:129
+#: .\website\templates\base.html:130
 msgid "About Fahandej"
 msgstr ""
 
-#: .\website\templates\base.html:135
+#: .\website\templates\base.html:136
 msgid "Links"
 msgstr ""
 
