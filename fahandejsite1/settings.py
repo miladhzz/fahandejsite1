@@ -57,7 +57,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ckeditor'
+    'ckeditor',
+    'jalali_date',
 ]
 
 MIDDLEWARE = [
@@ -137,7 +138,7 @@ LANGUAGES = [
   ('ru', _('Russian')),
 ]
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tehran'
 
 USE_I18N = True
 
@@ -160,3 +161,10 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = '/home/fahandej/public_html/media/'
 MEDIA_URL = '/media/'
+
+JALALI_DATE_DEFAULTS = {
+   'Strftime': {
+        'date': '%y/%m/%d',
+        'datetime': '%y/%m/%d',
+    },
+}

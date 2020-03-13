@@ -1,5 +1,6 @@
 {% load static %}
 {% load i18n %}
+{% load jalali_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,36 +40,38 @@
 
 <body>
     <!-- Start Main Top -->
-        <div class="main-top">
+        <div class="main-top" style="height: 40px">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="custom-select-box">
-                        <form action="{% url 'set_language' %}" method="post" style="display: inline;">
-                            {% csrf_token %}
-                            <input name="next" type="hidden" value="{{ redirect_to }}">
-                            <input name="language" type="hidden" value="fa">
-                            <input type="image" src="{% static 'images/fa.png' %}" width="30">
-                        </form>
-                        <form action="{% url 'set_language' %}" method="post" style="display: inline;">
-                            {% csrf_token %}
-                            <input name="next" type="hidden" value="{{ redirect_to }}">
-                            <input name="language" type="hidden" value="en">
-                            <input type="image" src="{% static 'images/en.png' %}"  width="30">
-                        </form>
-                        <form action="{% url 'set_language' %}" method="post" style="display: inline;">
-                            {% csrf_token %}
-                            <input name="next" type="hidden" value="{{ redirect_to }}">
-                            <input name="language" type="hidden" value="ru">
-                            <input type="image" src="{% static 'images/ru.png' %}"  width="30">
-                        </form>
-                    </div>
-                </div>
+            <div class="float-left">
+                <form action="{% url 'set_language' %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <input name="language" type="hidden" value="fa">
+                    <input type="image" src="{% static 'images/fa.png' %}" width="30">
+                </form>
+                <form action="{% url 'set_language' %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <input name="language" type="hidden" value="en">
+                    <input type="image" src="{% static 'images/en.png' %}"  width="30">
+                </form>
+                <form action="{% url 'set_language' %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <input name="language" type="hidden" value="ru">
+                    <input type="image" src="{% static 'images/ru.png' %}"  width="30">
+                </form>
+            </div>
+            <div class="float-right" style="color: white;">
+                {% if LANGUAGE_CODE == 'fa'%}
+                    <div>امروز: {% jalali_now %}</div>
+                {% else %}
+                    <div>Today: {% now "d/m/Y" %}</div>
+                {% endif %}
             </div>
         </div>
     </div>
     <!-- End Main Top -->
-
     <!-- Start Main Top -->
     <header class="main-header">
         <!-- Start Navigation -->
@@ -182,7 +185,7 @@
     <script src="{% static 'js/baguetteBox.min.js' %}"></script>
     <script src="{% static 'js/form-validator.min.js' %}"></script>
     <script src="{% static 'js/contact-form-script.js' %}"></script>
-    <script src="{% static 'js/custom.js' %}"></script> 
+    <script src="{% static 'js/custom.js' %}"></script>
 </body>
 
 </html>
