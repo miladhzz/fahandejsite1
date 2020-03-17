@@ -1723,13 +1723,13 @@ a:focus {
   padding: 10px;
   position: relative;
 }
-.addProduct li{
+.addProduct li, .addPicture li{
   list-style: none;
   display: inline-block;
   margin: 10px;
 }
 
-#id_title, #id_slug, #id_address, #id_phone, #id_mobile, #id_small_about, #id_postal_code, #id_email{
+#id_title, #id_slug, #id_address, #id_phone, #id_mobile, #id_small_about, #id_postal_code, #id_email, #id_name, #id_subtitle{
   border-radius: 2px;
   box-shadow: none;
   border-color: #d2d6de;
