@@ -6,6 +6,6 @@ Pillow==7.1.0
 mysql-connector-python==8.0.19
 pytz==2019.3
 six==1.13.0
-sqlparse==0.3.0
+sqlparse==0.4.4
 wfastcgi==3.0.0
 django-jalali-date==0.3.1
